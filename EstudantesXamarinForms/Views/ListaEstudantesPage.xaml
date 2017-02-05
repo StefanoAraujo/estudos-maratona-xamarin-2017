@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage Title="Estudantes" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EstudantesXamarinForms.ListaEstudantesPage">
 	<ContentPage.Content>
-		<ListView x:Name="estudantesListView" HasUnevenRows="true">
+		<ListView x:Name="estudantesListView" HasUnevenRows="true" ItemSelected="Handle_ItemSelected" 
+				IsPullToRefreshEnabled="true" Refreshing="Handle_Refreshing">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
-						<StackLayout Orientation="Horizontal" Padding="5">
-							<Image Source="{Binding ImagemUrl}" HeightRequest="60" WidthRequest="60" />
+						<ViewCell.ContextActions>
+				            <MenuItem Clicked="Handle_DeleteClicked" CommandParameter="{Binding .}"
+				               Text="Remover" IsDestructive="True" />
+				         </ViewCell.ContextActions>
+						<StackLayout Orientation="Horizontal" Padding="5" BackgroundColor="White">
+							<Image Source="{Binding ImagemUrl}" HeightRequest="60" WidthRequest="60" Margin="10,0,0,0" />
 							<StackLayout HorizontalOptions="StartAndExpand">
 								<Label Text="{Binding Nome}" TextColor="Black" Margin="0,8,0,0" />
 								<Label Text="{Binding Twitter}" TextColor="Gray" FontSize="12" />
