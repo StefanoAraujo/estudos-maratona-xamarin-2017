@@ -1,0 +1,10 @@
+// OSX Files
+.DS_Store
+
+// Xamarin Files
+EstudantesXamarinForms/bin
+EstudantesXamarinForm/obj
+Droid/bin
+Droid/obj
+iOS/bin
+iOS/obj

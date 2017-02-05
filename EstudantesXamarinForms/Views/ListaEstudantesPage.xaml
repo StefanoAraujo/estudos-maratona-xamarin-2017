@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Estudantes" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EstudantesXamarinForms.ListaEstudantesPage">
+	<ContentPage.Content>
+		<ListView x:Name="estudantesListView" HasUnevenRows="true">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Horizontal" Padding="5">
+							<Image Source="{Binding ImagemUrl}" HeightRequest="60" WidthRequest="60" />
+							<StackLayout HorizontalOptions="StartAndExpand">
+								<Label Text="{Binding Nome}" TextColor="Black" Margin="0,8,0,0" />
+								<Label Text="{Binding Twitter}" TextColor="Gray" FontSize="12" />
+							</StackLayout>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>
