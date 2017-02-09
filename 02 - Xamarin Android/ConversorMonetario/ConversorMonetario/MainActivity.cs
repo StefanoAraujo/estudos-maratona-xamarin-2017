@@ -14,18 +14,14 @@ namespace ConversorMonetario
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
 
-            var btnCalc = FindViewById<Button>(Resource.Id.btnCalcular);
+            var btnCalcular = FindViewById<Button>(Resource.Id.btnCalcular);
             var txtDolar = FindViewById<EditText>(Resource.Id.txtDolar);
             var txtReal = FindViewById<EditText>(Resource.Id.txtReal);
 
-            //double real, dolar;
-
-            btnCalc.Click += delegate
+            btnCalcular.Click += delegate
             {
                 try
                 {
-                    //dolar = double.Parse(txtDolar.Text);
-                    //real = dolar * 3.126;
                     txtReal.Text = (double.Parse(txtDolar.Text) * 3.126).ToString();
                 }
                 catch (System.Exception ex)

@@ -1,49 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@drawable/fundo">
     <TextView
         android:text="Conversor Monetário"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingTop="30px"
-        android:id="@+id/textView2" />
+        android:layout_width="300dp"
+		android:layout_height="80dp" 
+		android:gravity="center" />
     <TextView
-        android:text="Dolar"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="125.0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:text="Dólar"
+        android:layout_width="80dp"
+		android:layout_height="50dp" 
+		android:layout_marginTop="80dp"
+		android:layout_marginRight="80dp"
+		android:gravity="center" />
     <EditText
+		android:text="0"
+		android:numeric="integer"
         android:inputType="number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/txtDolar"
-        android:layout_marginRight="0.0dp"
-        android:textColor="@android:color/background_dark"
-        android:background="@android:color/background_light" />
+		android:layout_width="130dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="80dp" 
+		android:layout_alignParentRight="true" 
+		android:gravity="center" />
     <TextView
-        android:text="Real"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="125.0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:text="Reais"
+        android:layout_width="80dp"
+		android:layout_height="50dp" 
+		android:layout_marginTop="180dp"
+		android:layout_marginRight="80dp"
+		android:gravity="center" />
     <EditText
+		android:text="0"
+		android:numeric="integer"
         android:inputType="number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/txtReal"
-        android:layout_marginRight="0.0dp"
-        android:background="@android:color/background_light" 
-        android:textColor="@android:color/background_dark"/>
+		android:layout_width="130dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="180dp" 
+		android:layout_alignParentRight="true" 
+		android:gravity="center" />
     <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnCalcular" />
-</LinearLayout>
+    	android:text="Calcular"
+        android:id="@+id/btnCalcular"
+		android:background="#FFFF1111"
+		android:layout_width="130dp"
+		android:layout_height="60dp"
+		android:layout_marginTop="280dp" 
+		android:layout_alignParentRight="true"  
+		android:gravity="center" />
+</RelativeLayout>
