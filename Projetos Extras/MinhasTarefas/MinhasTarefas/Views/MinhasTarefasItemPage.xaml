@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MinhasTarefas.MinhasTarefasItemPage">
+	<StackLayout Margin="20" VerticalOptions="StartAndExpand">
+		<Label Text="Título" />
+		<Entry Text="{Binding Titulo}" />
+		<Label Text="Notas" />
+		<Entry Text="{Binding Notas}" />
+		<Label Text="Concluída?" />
+		<Switch IsToggled="{Binding Concluida}" />
+		<Button Text="Salvar" Clicked="OnSaveClicked" />
+		<Button Text="Remover" Clicked="OnDeleteClicked" />
+		<Button Text="Cancelar" Clicked="OnCancelClicked" />
+		<Button Text="Falar" Clicked="OnSpeakClicked" />
+	</StackLayout>
+</ContentPage>

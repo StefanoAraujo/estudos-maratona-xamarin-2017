@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage Title="Minhas Tarefas" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MinhasTarefas" x:Class="MinhasTarefas.MinhasTarefasPage">
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Adicionar" Clicked="OnItemAdded">
+			<ToolbarItem.Icon>
+				<OnPlatform x:TypeArguments="FileImageSource" Android="add.png" iOS="add.png" />
+			</ToolbarItem.Icon>
+		</ToolbarItem>
+	</ContentPage.ToolbarItems>
+	
+	<ListView x:Name="tarefasListView" HasUnevenRows="true" ItemSelected="OnListItemSelected">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout Orientation="Horizontal" Padding="5" BackgroundColor="White">
+						<StackLayout HorizontalOptions="StartAndExpand" Margin="12,8,0,8">
+							<Label Text="{Binding Titulo}" TextColor="#333333" Margin="0,8,0,8" />
+						</StackLayout>
+						<Image Source="check.png" HeightRequest="24" WidthRequest="24" IsVisible="{Binding Concluida}" Margin="0,0,12,0" />
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+	
+</ContentPage>
